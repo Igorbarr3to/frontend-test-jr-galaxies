@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Via Láctea",
+    "type": "Espiral Barrada",
+    "distance": "0 anos-luz (estamos nela)",
+    "stars_count_estimate": "200 a 400 bilhões",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/The_Milky_Way_Galaxy_and_the_Large_and_Small_Magellanic_Clouds.jpg/640px-The_Milky_Way_Galaxy_and_the_Large_and_Small_Magellanic_Clouds.jpg",
+    "description": "Nossa galáxia natal. Contém o Sistema Solar e um buraco negro supermassivo, Sagitário A*, em seu centro. Sua estrutura em espiral só pode ser observada de fora."
+  },
+  {
+    "id": 2,
+    "name": "Andrômeda (M31)",
+    "type": "Espiral",
+    "distance": "2.537 milhões de anos-luz",
+    "stars_count_estimate": "Aproximadamente 1 trilhão",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg",
+    "description": "A maior e mais próxima galáxia espiral da Via Láctea. Está em rota de colisão conosco, um evento que acontecerá em cerca de 4.5 bilhões de anos."
+  },
+  {
+    "id": 3,
+    "name": "Galáxia do Triângulo (M33)",
+    "type": "Espiral",
+    "distance": "3 milhões de anos-luz",
+    "stars_count_estimate": "Aproximadamente 40 bilhões",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/M33HunterWilson09.jpg/600px-M33HunterWilson09.jpg",
+    "description": "A terceira maior galáxia do Grupo Local, depois de Andrômeda e da Via Láctea. É notável por suas vastas regiões de formação de estrelas."
+  },
+  {
+    "id": 4,
+    "name": "Grande Nuvem de Magalhães",
+    "type": "Anã Irregular",
+    "distance": "163.000 anos-luz",
+    "stars_count_estimate": "Cerca de 30 bilhões",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/LMC_full_color_%28Large_Magellanic_Cloud%29.jpg/960px-LMC_full_color_%28Large_Magellanic_Cloud%29.jpg?20240927070455",
+    "description": "Uma galáxia satélite da Via Láctea. É a terceira galáxia mais próxima de nós e é visível a olho nu no hemisfério sul."
+  },
+  {
+    "id": 5,
+    "name": "Galáxia do Sombreiro (M104)",
+    "type": "Espiral não barrada",
+    "distance": "29.3 milhões de anos-luz",
+    "stars_count_estimate": "Aproximadamente 100 bilhões",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/M104_ngc4594_sombrero_galaxy_hi-res.jpg",
+    "description": "Famosa por seu núcleo brilhante e um anel de poeira proeminente em seu disco, que lhe confere a aparência de um chapéu sombrero."
+  },
+  {
+    "id": 6,
+    "name": "Galáxia do Rodamoinho (M51)",
+    "type": "Espiral de Grande Estrutura",
+    "distance": "23 milhões de anos-luz",
+    "stars_count_estimate": "Cerca de 100 bilhões",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Messier51.jpg/1280px-Messier51.jpg",
+    "description": "Uma das galáxias espirais mais famosas e fotogênicas do céu. Seus braços espirais bem definidos são um exemplo clássico de interação com sua galáxia companheira, a NGC 5195."
+  },
+  {
+    "id": 7,
+    "name": "Galáxia Cata-Vento (M101)",
+    "type": "Espiral",
+    "distance": "21 milhões de anos-luz",
+    "stars_count_estimate": "Aproximadamente 1 trilhão",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/M101_hires_STScI-PRC2006-10a.jpg",
+    "description": "Uma grande galáxia espiral vista de frente da Terra. É notável por sua alta população de nebulosas H II e aglomerados de estrelas jovens e quentes."
+  }
+]
