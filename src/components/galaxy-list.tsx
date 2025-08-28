@@ -20,7 +20,6 @@ const GalaxyList = ({ galaxies }: GalaxyListProps) => {
   };
 
   return (
-  
     <Paper variant="outlined" sx={{ maxHeight: "70vh", overflow: "auto" }}>
       <List component="nav" aria-label="lista de galáxias">
         {galaxies.map((galaxy, index) => (
