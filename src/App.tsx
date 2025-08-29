@@ -30,7 +30,7 @@ function App() {
   }, [searchGalaxyByName, allGalaxies]);
 
   return (
-    <Container sx={{ py: 4 }}>
+    <Container>
       <Typography variant="h3" component="h1" gutterBottom>
         Galaxies Challenge
       </Typography>
