@@ -22,12 +22,12 @@ const GalaxyList = ({
 }: GalaxyListProps) => {
   return (
     <Paper
-      variant="outlined"
       sx={{
         maxHeight: "70vh",
         overflow: "auto",
-        backgroundColor: "#121212",
+        backgroundColor: "09090b",
         color: "white",
+        width:"100%",
       }}
     >
       <List component="nav" aria-label="lista de galáxias">

@@ -1,13 +1,11 @@
-// src/theme.ts
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-const darkPurple = "#21004C";
 const spaceDark = "#09090b";
 const galaxyPurple = "#7B3FBC";
 const starYellow = "#FFD700";
 const nebulaGray = "#B0BEC5";
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
@@ -22,7 +20,7 @@ const theme = createTheme({
     },
     background: {
       default: spaceDark,
-      paper: darkPurple,
+      paper: spaceDark,
     },
     text: {
       primary: "#E0E0E0",
@@ -91,5 +89,7 @@ const theme = createTheme({
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 export default theme;

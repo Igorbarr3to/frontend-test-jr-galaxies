@@ -30,49 +30,86 @@ function App() {
   }, [searchGalaxyByName, allGalaxies]);
 
   return (
-    <Container>
-      <Typography variant="h3" component="h1" gutterBottom>
-        Galaxies Challenge
-      </Typography>
+    <div className="starry-background">
+      <div className="stars"></div>
+      <div className="stars2"></div>
+      <div className="stars3"></div>
 
-      <Box
-        sx={{ display: { xs: selectedGalaxy ? "none" : "block", md: "block" } }}
+      <Container
+        sx={{
+          spacing: 2,
+          width: "100%",
+          height: "100vh",
+          paddingTop: 4,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
       >
-        <SearchBar
-          value={searchGalaxyByName}
-          onChange={(e) => setSearchGalaxyByName(e.target.value)}
-        />
-      </Box>
+        <Typography
+          variant="h3"
+          component="h1"
+          gutterBottom
+          sx={{ textAlign: "center" }}
+        >
+          Galaxies Challenge
+        </Typography>
 
-      <Grid container spacing={2}>
-        <Grid
-          component="section"
-          size={{ xs: 12, md: 4 }}
+        <Box
           sx={{
             display: { xs: selectedGalaxy ? "none" : "block", md: "block" },
           }}
         >
-          <GalaxyList
-            galaxies={filteredGalaxies}
-            selectedGalaxy={selectedGalaxy}
-            onSelectGalaxy={setSelectedGalaxy}
+          <SearchBar
+            value={searchGalaxyByName}
+            onChange={(e) => setSearchGalaxyByName(e.target.value)}
           />
+        </Box>
+
+        <Grid container sx={{ mt: 2 }} spacing={2}>
+          <Grid
+            component="section"
+            size={{ xs: 12, md: 4 }}
+            sx={{
+              display: { xs: selectedGalaxy ? "none" : "block", md: "block" },
+            }}
+          >
+            <GalaxyList
+              galaxies={filteredGalaxies}
+              selectedGalaxy={selectedGalaxy}
+              onSelectGalaxy={setSelectedGalaxy}
+            />
+          </Grid>
+
+          <Grid
+            component="section"
+            size={{ xs: 12, md: 8 }}
+            sx={{
+              display: { xs: selectedGalaxy ? "block" : "none", md: "block" },
+            }}
+          >
+            <GalaxyDetails
+              galaxy={selectedGalaxy}
+              onGoBack={() => setSelectedGalaxy(null)}
+            />
+          </Grid>
         </Grid>
 
-        <Grid
-          component="section"
-          size={{ xs: 12, md: 8 }}
-          sx={{
-            display: { xs: selectedGalaxy ? "block" : "none", md: "block" },
-          }}
+        <Typography
+          variant="subtitle2"
+          color="text.secondary"
+          align="center"
+          sx={{pt:1}}
         >
-          <GalaxyDetails
-            galaxy={selectedGalaxy}
-            onGoBack={() => setSelectedGalaxy(null)}
-          />
-        </Grid>
-      </Grid>
-    </Container>
+          &copy; {new Date().getFullYear()} Galaxies Challenge -
+          por
+          <a href="https://linkedin.com/in/igor-barreto11" target="_blank">
+            {" "}
+            Igor Barreto
+          </a>
+        </Typography>
+      </Container>
+    </div>
   );
 }
 

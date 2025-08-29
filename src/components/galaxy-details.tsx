@@ -6,8 +6,9 @@ import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import type { Galaxy } from "../types";
-import { Button } from "@mui/material";
+import { Button, Container, Skeleton } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
+import { useEffect, useState } from "react";
 
 interface GalaxyDetailsProps {
   galaxy: Galaxy | null;
@@ -15,20 +16,27 @@ interface GalaxyDetailsProps {
 }
 
 const GalaxyDetails = ({ galaxy, onGoBack }: GalaxyDetailsProps) => {
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
+  useEffect(() => {
+    if (galaxy) {
+      setIsImageLoading(true);
+    }
+  }, [galaxy]);
+
   if (!galaxy) {
     return (
       <Card
-        variant="outlined"
+        variant="elevation"
         sx={{
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          p: 3,
         }}
       >
-        <Box>
+        <Box sx={{ p: 20 }}>
           <InfoOutlinedIcon
             sx={{ fontSize: 48, color: "text.secondary", mb: 2 }}
           />
@@ -44,45 +52,71 @@ const GalaxyDetails = ({ galaxy, onGoBack }: GalaxyDetailsProps) => {
     <Card
       variant="elevation"
       sx={{
-        maxHeight: "60vh",
-        overflow: "auto",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         backgroundColor: "#121212",
         color: "white",
       }}
     >
-      <Button
-        startIcon={<ArrowBack />}
-        onClick={onGoBack}
-        sx={{
-          display: { xs: "inline-flex", md: "none" },
-        }}
-        style={{ background: "#1976d2", color: "white", margin: 10 }}
-      >
-        Voltar
-      </Button>
+      {isImageLoading && (
+        <Skeleton
+          variant="rectangular"
+          animation="wave"
+          sx={{
+            height: {
+              xs: 200,
+              sm: 250,
+              md: 300,
+            },
+          }}
+        />
+      )}
 
       <CardMedia
         component="img"
-        height="300"
-        style={{ objectFit: "cover" }}
+        sx={{
+          objectFit: "cover",
+          display: isImageLoading ? "none" : "block",
+          height: {
+            xs: 200,
+            sm: 250,
+            md: 300,
+          },
+        }}
         image={galaxy.image_url}
         alt={`Imagem da galáxia ${galaxy.name}`}
+        onLoad={() => setIsImageLoading(false)}
       />
+      <Container
+        sx={{ width: "100%", textAlign: { xs: "center", md: "left" } }}
+      >
+        <Button startIcon={<ArrowBack />} onClick={onGoBack}>
+          Voltar
+        </Button>
+      </Container>
 
-      <CardContent style={{ color: "white" }}>
+      <CardContent style={{ color: "white", width: "100%" }}>
         <Typography gutterBottom variant="h4" component="div">
           {galaxy.name}
         </Typography>
 
-        <Box sx={{ display: "flex", gap: 1, my: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: { xs: 0.5, md: 1 },
+            flexWrap: "wrap",
+            my: 2,
+          }}
+        >
           <Chip label={galaxy.type} color="primary" />
           <Chip label={galaxy.distance} variant="outlined" color="info" />
+          <Chip
+            label={`Estrelas: ${galaxy.stars_count_estimate}`}
+            variant="outlined"
+            color="warning"
+          />
         </Box>
-
-        <Typography variant="body1" sx={{ mb: 1 }}>
-          <strong>Estrelas:</strong> {galaxy.stars_count_estimate}
-        </Typography>
 
         <Typography variant="body1" textAlign="justify" component="div">
           {galaxy.description}
