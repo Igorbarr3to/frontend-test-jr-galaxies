@@ -1,4 +1,4 @@
-# Detalhes do teste
+# Descrição
 🪐 Galaxies Frontend Challenge (Júnior)
 🎯 Objetivos
 
