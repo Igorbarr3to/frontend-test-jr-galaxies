@@ -6,9 +6,9 @@ import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import type { Galaxy } from "../types";
-import { Button, Container, Skeleton } from "@mui/material";
-import { ArrowBack } from "@mui/icons-material";
+import { IconButton, Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
+import { Close } from "@mui/icons-material";
 
 interface GalaxyDetailsProps {
   galaxy: Galaxy | null;
@@ -52,11 +52,30 @@ const GalaxyDetails = ({ galaxy, onGoBack }: GalaxyDetailsProps) => {
     <Card
       variant="elevation"
       sx={{
+        position: "relative",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         backgroundColor: "#121212",
         color: "white",
       }}
     >
+       <IconButton
+        aria-label="Voltar para a lista"
+        onClick={onGoBack}
+        sx={{
+          position: 'absolute', 
+          top: 8,
+          left: 8,              
+          zIndex: 3,            
+          color: 'white',       
+          backgroundColor: '#7b3fbce1', 
+          '&:hover': {
+            backgroundColor: '#8848ccff', 
+          },
+        }}
+      >
+        <Close />
+      </IconButton>
+
       {isImageLoading && (
         <Skeleton
           variant="rectangular"
@@ -86,13 +105,6 @@ const GalaxyDetails = ({ galaxy, onGoBack }: GalaxyDetailsProps) => {
         alt={`Imagem da galáxia ${galaxy.name}`}
         onLoad={() => setIsImageLoading(false)}
       />
-      <Container
-        sx={{ width: "100%", textAlign: { xs: "center", md: "left" } }}
-      >
-        <Button startIcon={<ArrowBack />} onClick={onGoBack}>
-          Voltar
-        </Button>
-      </Container>
 
       <CardContent style={{ color: "white", width: "100%" }}>
         <Typography gutterBottom variant="h4" component="div">
