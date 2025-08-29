@@ -46,7 +46,7 @@ Para executar este projeto em seu ambiente de desenvolvimento, siga os passos ab
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone https://github.com/Igorbarr3to/frontend-test-jr-galaxies
     ```
 
 2.  **Navegue até a pasta do projeto:**
