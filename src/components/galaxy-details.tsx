@@ -79,7 +79,7 @@ const GalaxyDetails = ({ galaxy, onGoBack }: GalaxyDetailsProps) => {
           height: {
             xs: 200,
             sm: 250,
-            md: 300,
+            md: 400,
           },
         }}
         image={galaxy.image_url}

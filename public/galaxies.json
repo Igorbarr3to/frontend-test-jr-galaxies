@@ -5,7 +5,7 @@
     "type": "Espiral Barrada",
     "distance": "0 anos-luz (estamos nela)",
     "stars_count_estimate": "200 a 400 bilhões",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/The_Milky_Way_Galaxy_and_the_Large_and_Small_Magellanic_Clouds.jpg/640px-The_Milky_Way_Galaxy_and_the_Large_and_Small_Magellanic_Clouds.jpg",
+    "image_url": "https://img.odcdn.com.br/wp-content/uploads/2019/12/20191223113501.jpg",
     "description": "Nossa galáxia natal. Contém o Sistema Solar e um buraco negro supermassivo, Sagitário A*, em seu centro. Sua estrutura em espiral só pode ser observada de fora."
   },
   {
@@ -23,7 +23,7 @@
     "type": "Espiral",
     "distance": "3 milhões de anos-luz",
     "stars_count_estimate": "Aproximadamente 40 bilhões",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/M33HunterWilson09.jpg/600px-M33HunterWilson09.jpg",
+    "image_url": "https://t.ctcdn.com.br/C--1344ymxqQqPPrby79oI0-PFg=/1024x0/smart/filters:format(webp)/i643812.png",
     "description": "A terceira maior galáxia do Grupo Local, depois de Andrômeda e da Via Láctea. É notável por suas vastas regiões de formação de estrelas."
   },
   {
@@ -37,11 +37,11 @@
   },
   {
     "id": 5,
-    "name": "Galáxia do Sombreiro (M104)",
+    "name": "Galáxia do Sombrero (M104)",
     "type": "Espiral não barrada",
     "distance": "29.3 milhões de anos-luz",
     "stars_count_estimate": "Aproximadamente 100 bilhões",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/M104_ngc4594_sombrero_galaxy_hi-res.jpg",
+    "image_url": "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2025/04/20145543/Galaxia-sombrero.jpg",
     "description": "Famosa por seu núcleo brilhante e um anel de poeira proeminente em seu disco, que lhe confere a aparência de um chapéu sombrero."
   },
   {
@@ -59,7 +59,7 @@
     "type": "Espiral",
     "distance": "21 milhões de anos-luz",
     "stars_count_estimate": "Aproximadamente 1 trilhão",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/M101_hires_STScI-PRC2006-10a.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/M101_hires_STScI-PRC2006-10a.jpg/960px-M101_hires_STScI-PRC2006-10a.jpg",
     "description": "Uma grande galáxia espiral vista de frente da Terra. É notável por sua alta população de nebulosas H II e aglomerados de estrelas jovens e quentes."
   }
 ]
