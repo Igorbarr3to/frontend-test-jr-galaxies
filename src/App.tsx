@@ -6,6 +6,7 @@ import SearchBar from "./components/search-bar";
 import GalaxyDetails from "./components/galaxy-details";
 import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import normalizeText from "./lib/normalizeText";
 
 function App() {
   const [allGalaxies, setAllGalaxies] = useState<Galaxy[]>([]);
@@ -22,11 +23,18 @@ function App() {
   }, []);
 
   const filteredGalaxies = useMemo(() => {
+    const cleanedSearch = normalizeText(
+      searchGalaxyByName.toLowerCase().trim()
+    );
+
     if (!searchGalaxyByName) return allGalaxies;
 
-    return allGalaxies.filter((galaxy) =>
-      galaxy.name.toLowerCase().includes(searchGalaxyByName.toLowerCase())
-    );
+    return allGalaxies.filter((galaxy) => {
+      const normalizedGalaxyName = normalizeText(
+        galaxy.name.trim().toLowerCase()
+      );
+      return normalizedGalaxyName.includes(cleanedSearch);
+    });
   }, [searchGalaxyByName, allGalaxies]);
 
   return (
@@ -99,10 +107,9 @@ function App() {
           variant="subtitle2"
           color="text.secondary"
           align="center"
-          sx={{pt:1}}
+          sx={{ pt: 1 }}
         >
-          &copy; {new Date().getFullYear()} Galaxies Challenge -
-          por
+          &copy; {new Date().getFullYear()} Galaxies Challenge - por
           <a href="https://linkedin.com/in/igor-barreto11" target="_blank">
             {" "}
             Igor Barreto
